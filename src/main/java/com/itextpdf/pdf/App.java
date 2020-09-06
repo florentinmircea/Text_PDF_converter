@@ -60,14 +60,18 @@ public class App extends JFrame implements ActionListener {
         f.add(o);
         f.add(s);
         f.add(c);
+        f.addSeparator();
         f.add(e);
         edit.add(u);
+        edit.addSeparator();
         edit.add(cut);
         edit.add(copy);
         edit.add(paste);
+        edit.addSeparator();
         edit.add(fi);
         edit.add(re);
         edit.add(gt);
+        edit.addSeparator();
         edit.add(td);
 
         setJMenuBar(mb);
