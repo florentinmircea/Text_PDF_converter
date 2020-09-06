@@ -10,6 +10,7 @@ import com.itextpdf.layout.property.AreaBreakType;
 import com.itextpdf.layout.property.TextAlignment;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 
 public class Processing {
@@ -70,7 +71,12 @@ public class Processing {
             }
             document.close();
             JOptionPane.showMessageDialog(null, "Conversion complete!", "Converted", JOptionPane.INFORMATION_MESSAGE);
+            File myFile = new File(f+".pdf");
+            Desktop.getDesktop().open(myFile);
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
